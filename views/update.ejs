@@ -1,0 +1,18 @@
+<%-include("partial/header")%>
+<%-include("partial/nav")%>
+
+<h1>update book</h1>
+
+<form action="/update/<%=i%>" method="post">
+    <input type="text" name="name" value="<%=odata.name%>" id="" placeholder="Book name">
+    <br>
+    <input type="text" name="auther" value="<%=odata.auther%>" id="" placeholder="Auther">
+    <br>
+    <input type="text" name="category" value="<%=odata.category%>" id="" placeholder="Category">
+    <br>
+    <textarea placeholder="text" name="text" id="" cols="30" rows="10"><%=odata.text%></textarea>
+
+    <button type="submit">update</button>
+</form>
+
+<%-include("partial/footer")%>

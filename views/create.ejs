@@ -1,0 +1,14 @@
+<%-include("partial/header")%>
+<%-include("partial/nav")%>
+    <form action="/create" method="post">
+        <input type="text" name="name" id="" placeholder="Book name">
+        <br>
+        <input type="text" name="auther" id="" placeholder="Auther">
+        <br>
+        <input type="text" name="category" id="" placeholder="Category">
+        <br>
+        <textarea placeholder="text" name="text" id="" cols="30" rows="10"></textarea>
+
+        <button type="submit">submit</button>
+    </form>
+<%-include("partial/footer")%>

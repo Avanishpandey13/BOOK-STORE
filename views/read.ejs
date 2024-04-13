@@ -1,0 +1,15 @@
+<%-include("partial/header")%>
+<%-include("partial/nav")%>
+    
+   <%book.forEach((book,index)=>{%>
+        <h1><%=book.name%></h1>
+        <h1><%=book.auther%></h1>
+        <h1><%=book.category%></h1>
+        <p><%=book.text%></p>
+        <a href="/viewbook/<%=index%>">View book</a>
+        <a href="/update/<%=index%>">Update</a>
+        <a href="/delete/<%=index%>">delete</a>
+   <%})%>
+        
+    
+<%-include("partial/footer")%>
