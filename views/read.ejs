@@ -1,15 +1,33 @@
 <%-include("partial/header")%>
 <%-include("partial/nav")%>
     
+<div class="w-full h-[90vh] bg-[url(https://plus.unsplash.com/premium_photo-1699708592614-4b52c61e456f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-cover flex justify-center items-center  ">  
+   <div class="w-4/5 h-1/2 whitespace-nowrap overflow-x-auto overflow-y-hidden scrollbar  ">
    <%book.forEach((book,index)=>{%>
-        <h1><%=book.name%></h1>
-        <h1><%=book.auther%></h1>
-        <h1><%=book.category%></h1>
-        <p><%=book.text%></p>
-        <a href="/viewbook/<%=index%>">View book</a>
-        <a href="/update/<%=index%>">Update</a>
-        <a href="/delete/<%=index%>">delete</a>
+
+
+   <div class="w-1/4 h-full bg-slate-300 overflow-y-hidden overflow-x-hidden inline-block rounded-3xl">
+
+      <div class="w-full h-full  flex flex-col justify-between items-center rounded-3xl">
+
+         <img class="w-full" src="/images/<%= book.image %>" alt="">
+         <h1><%=book.name%></h1>
+         <h1><%=book.author%></h1>
+         <h1><%=book.category%></h1>
+         <p class="w-fit h-6 overflow-hidden "><%=book.text%></p>
+
+         <div class="w-full flex justify-around">
+            <a class="w-fit px-2 rounded-xl bg-blue-300" href="/viewbook/<%=book._id%>">View book</a>
+            <a class="w-fit px-2 rounded-xl bg-blue-300" href="/update/<%=book._id%>">Update</a>
+            <a class="w-fit px-2 rounded-xl bg-blue-300" href="/delete/<%=book._id%>">delete</a>
+         </div>
+      
+      </div>
+   </div>
    <%})%>
+   </div>
+</div>
+
         
     
 <%-include("partial/footer")%>

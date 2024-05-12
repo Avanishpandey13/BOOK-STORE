@@ -1,14 +1,19 @@
 <%-include("partial/header")%>
-<%-include("partial/nav")%>
-    <form action="/create" method="post">
-        <input type="text" name="name" id="" placeholder="Book name">
-        <br>
-        <input type="text" name="auther" id="" placeholder="Auther">
-        <br>
-        <input type="text" name="category" id="" placeholder="Category">
-        <br>
-        <textarea placeholder="text" name="text" id="" cols="30" rows="10"></textarea>
+    <%-include("partial/nav")%>
+    <form class="w-full h-[90vh] bg-[url('https://images.unsplash.com/photo-1515787366009-7cbdd2dc587b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex flex-col justify-evenly items-center py-7" action="/create" method="post" enctype="multipart/form-data">
 
-        <button type="submit">submit</button>
+        <input class="w-1/4" type="file" name="image" id="">
+        <br>
+        <input class="w-1/4 h-11 rounded-2xl px-3  " type="text" name="name" id="" placeholder="Book name">
+        <br>
+        <input class="w-1/4 h-11  rounded-2xl px-3" type="text" name="author" id="" placeholder="Auther">
+        <br>
+        <input class="w-1/4 h-11 rounded-2xl px-3" type="text" name="category" id="" placeholder="Category">
+        <br>
+        <textarea class="rounded-2xl px-3 py-3" placeholder="text" name="text" id="" cols="60" rows="5"></textarea>
+
+        <button class="bg-blue-400 w-24 h-12 rounded-2xl" type="submit">submit</button>
     </form>
+
+
 <%-include("partial/footer")%>

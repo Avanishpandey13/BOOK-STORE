@@ -1,18 +1,28 @@
 <%-include("partial/header")%>
 <%-include("partial/nav")%>
 
-<h1>update book</h1>
+<!-- <h1>update book</h1> -->
 
-<form action="/update/<%=i%>" method="post">
-    <input type="text" name="name" value="<%=odata.name%>" id="" placeholder="Book name">
-    <br>
-    <input type="text" name="auther" value="<%=odata.auther%>" id="" placeholder="Auther">
-    <br>
-    <input type="text" name="category" value="<%=odata.category%>" id="" placeholder="Category">
-    <br>
-    <textarea placeholder="text" name="text" id="" cols="30" rows="10"><%=odata.text%></textarea>
+<form class="w-full h-[90vh] bg-[url('https://images.unsplash.com/photo-1511649475669-e288648b2339?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat  flex flex-col justify-evenly items-center" action="/update/<%=odata._id%>" method="post" enctype="multipart/form-data">
 
-    <button type="submit">update</button>
+    <div class="w-full h-full bg-white bg-opacity-40 flex flex-col justify-evenly items-center">
+
+    <img class="w-1/4 h-1/5 rounded-2xl" src="/images/<%=odata.image%>" alt="OPP's">
+
+    <input type="hidden" name="oldimage" value="<%=odata.image%>">
+
+    <input class="w-1/4" type="file" name="image" id="">
+
+    <input class="w-1/4 h-11 rounded-2xl px-3" type="text" name="name" value="<%=odata.name%>" id="" placeholder="Book name">
+    <br>
+    <input class="w-1/4 h-11 rounded-2xl px-3" type="text" name="author" value="<%=odata.author%>" id="" placeholder="Author">
+    <br>
+    <input class="w-1/4 h-11 rounded-2xl px-3" type="text" name="category" value="<%=odata.category%>" id="" placeholder="Category">
+    <br>
+    <textarea class="rounded-2xl px-3 py-3" placeholder="text" name="text" id="" cols="60" rows="5"><%=odata.text%></textarea>
+
+    <button class="bg-blue-400 w-24 h-12 rounded-2xl" type="submit">update</button>
+    </div>
 </form>
 
 <%-include("partial/footer")%>
