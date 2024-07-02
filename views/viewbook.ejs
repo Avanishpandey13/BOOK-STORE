@@ -1,10 +1,18 @@
 <%-include("partial/header")%>
 <%-include("partial/nav")%>
 
-<h1>NOW YOU CAN READ BOOK</h1>
+<div class="w-full h-[90vh] flex ">
+    <div class="w-1/3 h-full bg-slate-400 flex flex-col items-center">
+        <img class="mt-10 rounded-2xl" width="40%" src="/images/<%=data.image%>" alt="">
+        <h1 class="text-3xl"><%=data.name%></h1>
+        <h3 class="text-2xl"><%=data.author%></h3>
 
-<h1><%=data.name%></h1>
-<h3><%=data.author%></h3>
-<p><%=data.text%></p>
+    </div>
+    <div class="w-2/3 h-full bg-red-100 flex justify-center items-center ">
+        <p class="px-16 py-12 text-2xl bg-slate-400 w-4/5 h-4/5 rounded-3xl"><%=data.text%></p>
+    </div>
+</div>
+
+<!-- <h1>NOW YOU CAN READ BOOK</h1> -->
 
 <%-include("partial/footer")%>

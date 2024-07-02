@@ -103,7 +103,7 @@ router.post("/update/:id",upload,async(req,res,next)=>{
     // res.redirect("/read")
 
     const updatedata = {...req.body}
-    console.log(req.body);
+    console.log(updatedata);
     if(req.file){
       updatedata.image = req.file.filename
 
