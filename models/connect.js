@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://127.0.0.1:27017/bookstore2db").then(()=>{
+mongoose.connect(process.env.DB_URI).then(()=>{
     console.log("db connected");
 }).catch((err)=>{console.log(err);})
